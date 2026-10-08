@@ -3,290 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MULTI VENTAS - Examen Práctico</title>
-    <!-- Bootstrap 5 CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Hoja de estilos personalizada -->
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Pizzas el Papi: pizzas recién horneadas para compartir. Conoce nuestras especialidades y tamaños.">
+    <title>Pizzas el Papi | Especialidades recién horneadas</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Top Bar -->
-    <div class="bg-dark text-white py-1 px-3 small d-flex justify-content-between align-items-center">
-        <div>
-            <span class="text-warning fw-bold">MULTI VENTAS</span>
+    <header class="site-header" id="inicio">
+        <div class="nav-wrap">
+            <a class="brand" href="#inicio" aria-label="Pizzas el Papi, inicio">Pizzas <span>el Papi</span></a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="#inicio" aria-current="page">Inicio</a>
+                <a href="#acerca">Acerca de</a>
+                <a href="#menu">Menú</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
         </div>
-        <div class="d-flex align-items-center gap-3">
-            <div class="input-group input-group-sm" style="width: 250px;">
-                <input type="text" class="form-control" placeholder="Search for products">
-                <button class="btn btn-outline-warning" type="button"><i class="fa fa-search"></i></button>
-            </div>
-            <div>
-                <span>Servicio al cliente: <strong class="text-warning">+52 9616112345</strong></span>
-            </div>
-        </div>
-    </div>
+    </header>
 
-    <!-- Navbar / Categorias -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <div class="container-fluid">
-            <div class="dropdown me-3">
-                <button class="btn btn-warning dropdown-toggle fw-bold text-dark px-4" type="button" data-bs-toggle="dropdown">
-                    <i class="fa fa-bars me-2"></i> Categorias
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Ropa</a></li>
-                    <li><a class="dropdown-item" href="#">Electrónica</a></li>
-                    <li><a class="dropdown-item" href="#">Calzado</a></li>
-                    <li><a class="dropdown-item" href="#">Belleza</a></li>
-                </ul>
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <p class="hero-kicker">Pizza Locas · Recién horneada</p>
+                <h1 id="hero-title">Los mejores <strong>sabores</strong></h1>
+                <p class="hero-subtitle">ESPECIALMENTE PARA TI</p>
+                <a class="hero-link" href="#menu">Descubre el menú</a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <ul class="navbar-nav gap-3 fw-semibold">
-                    <li class="nav-item"><a class="nav-link text-warning active" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                </ul>
-                <div class="d-flex align-items-center gap-3 fs-5 text-secondary">
-                    <i class="fa fa-heart"></i>
-                    <i class="fa fa-shopping-cart"></i>
-                    <i class="fa fa-user"></i>
-                </div>
-            </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Hero Section con Carrusel y Banners Laterales -->
-    <section class="container my-4">
-        <div class="row g-3">
-            <!-- Carrusel Principal -->
-            <div class="col-lg-8">
-                <div id="mainCarousel" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel" style="min-height: 380px;">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" style="height: 380px;">
-                            <img src="img/carrusel-1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Estilo Urbano">
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                <h5 class="fw-bold text-warning">Tendencia de Temporada</h5>
-                                <p>Moda exclusiva para hombres con estilo.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item" style="height: 380px;">
-                            <img src="img/carrusel-2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Moda Femenina">
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                <h5 class="fw-bold text-warning">Moda Femenina</h5>
-                                <p>Descubre los mejores abrigos y accesorios.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item" style="height: 380px;">
-                            <img src="img/carrusel-3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Moda Infantil">
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                                <h5 class="fw-bold text-warning">Colección Infantil</h5>
-                                <p>Ropa cómoda y divertida para los pequeños.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-            </div>
+        <section class="sizes" id="acerca" aria-label="Tamaños y precios">
+            <article class="size-option">
+                <img src="img/Cubiertos.png" alt="">
+                <h2>INDIVIDUAL</h2>
+                <p>$60.00 MXN</p>
+            </article>
+            <article class="size-option">
+                <img src="img/Cubiertos.png" alt="">
+                <h2>MEDIANA</h2>
+                <p>$85.00 MXN</p>
+            </article>
+            <article class="size-option">
+                <img src="img/Cubiertos.png" alt="">
+                <h2>FAMILIAR</h2>
+                <p>$100.00 MXN</p>
+            </article>
+        </section>
 
-            <!-- Banners Secundarios -->
-            <div class="col-lg-4 d-flex flex-column gap-3">
-                <div class="sub-banner text-white p-4 rounded position-relative overflow-hidden d-flex flex-column justify-content-center" style="background: url('img/oferta-1.jpg') center/cover no-repeat; height: 180px;">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-                    <div class="position-relative z-1">
-                        <small class="text-warning fw-bold">AHORRA 20%</small>
-                        <h4 class="fw-bold mb-2">Ofertas de temporada</h4>
-                        <a href="#" class="btn btn-warning btn-sm text-dark fw-bold px-3">Comprar</a>
-                    </div>
-                </div>
-                <div class="sub-banner text-white p-4 rounded position-relative overflow-hidden d-flex flex-column justify-content-center" style="background: url('img/oferta-2.jpg') center/cover no-repeat; height: 180px;">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-                    <div class="position-relative z-1">
-                        <small class="text-warning fw-bold">AHORRA 30%</small>
-                        <h4 class="fw-bold mb-2">Ofertas especiales</h4>
-                        <a href="#" class="btn btn-warning btn-sm text-dark fw-bold px-3">Comprar</a>
-                    </div>
-                </div>
+        <section class="specialties" id="menu" aria-labelledby="menu-title">
+            <div class="section-heading">
+                <p>Hechas para compartir</p>
+                <h2 id="menu-title">Nuestras especialidades</h2>
             </div>
-        </div>
-    </section>
+            <div class="pizza-grid">
+                <article class="pizza-item">
+                    <img src="img/peperoni.jpg" alt="Pizza de pepperoni recién horneada" loading="lazy">
+                    <div class="pizza-copy">
+                        <h3>Pepperoni</h3>
+                        <p>Queso fundido, salsa de tomate y pepperoni en cada rebanada.</p>
+                    </div>
+                </article>
+                <article class="pizza-item">
+                    <img src="img/hawaiiana.jpg" alt="Pizza hawaiana con piña y jamón" loading="lazy">
+                    <div class="pizza-copy">
+                        <h3>Hawaiana</h3>
+                        <p>La combinación clásica de jamón, piña, queso y salsa de tomate.</p>
+                    </div>
+                </article>
+                <article class="pizza-item">
+                    <img src="img/vegetariana.jpg" alt="Pizza vegetariana con verduras frescas" loading="lazy">
+                    <div class="pizza-copy">
+                        <h3>Vegetariana</h3>
+                        <p>Verduras frescas, aceitunas y queso sobre una base doradita.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-    <!-- Características (Icon Box) -->
-    <section class="container my-4 py-3 bg-white shadow-sm rounded">
-        <div class="row text-center g-3">
-            <div class="col-md-3 border-end">
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                    <i class="fa fa-award text-warning fs-3"></i>
-                    <span class="fw-semibold">Mejora calidad</span>
-                </div>
-            </div>
-            <div class="col-md-3 border-end">
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                    <i class="fa fa-shipping-fast text-warning fs-3"></i>
-                    <span class="fw-semibold">Envío gratis</span>
-                </div>
-            </div>
-            <div class="col-md-3 border-end">
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                    <i class="fa fa-undo text-warning fs-3"></i>
-                    <span class="fw-semibold">Devolución de 30 días</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="d-flex align-items-center justify-content-center gap-2">
-                    <i class="fa fa-headset text-warning fs-3"></i>
-                    <span class="fw-semibold">Soporte 24/7</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="location" id="contacto" aria-labelledby="contact-title">
+            <h2 id="contact-title">Encuéntranos</h2>
+            <p>Av. Aristofanes 318, Fracc. Atenas 1</p>
+            <p>Numero de contacto: 918 648 7941</p>
+        </section>
+    </main>
 
-    <!-- Categorías -->
-    <section class="container my-5">
-        <h3 class="fw-bold mb-4 border-bottom pb-2">CATEGORÍAS</h3>
-        <div class="row text-center g-4">
-            <div class="col-6 col-md-3">
-                <div class="card border-0 shadow-sm p-3 h-100 category-card">
-                    <img src="img/cat-1.jpg" class="card-img-top rounded-circle mx-auto mt-2" style="width: 100px; height: 100px; object-fit: cover;" alt="Ropa">
-                    <div class="card-body">
-                        <h6 class="fw-bold mb-1">Ropa</h6>
-                        <small class="text-muted">100 Productos</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="card border-0 shadow-sm p-3 h-100 category-card">
-                    <img src="img/cat-2.jpg" class="card-img-top rounded-circle mx-auto mt-2" style="width: 100px; height: 100px; object-fit: cover;" alt="Electrónica">
-                    <div class="card-body">
-                        <h6 class="fw-bold mb-1">Electrónica</h6>
-                        <small class="text-muted">100 Productos</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="card border-0 shadow-sm p-3 h-100 category-card">
-                    <img src="img/cat-3.jpg" class="card-img-top rounded-circle mx-auto mt-2" style="width: 100px; height: 100px; object-fit: cover;" alt="Calzado">
-                    <div class="card-body">
-                        <h6 class="fw-bold mb-1">Calzado</h6>
-                        <small class="text-muted">100 Productos</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="card border-0 shadow-sm p-3 h-100 category-card">
-                    <img src="img/cat-4.jpg" class="card-img-top rounded-circle mx-auto mt-2" style="width: 100px; height: 100px; object-fit: cover;" alt="Belleza">
-                    <div class="card-body">
-                        <h6 class="fw-bold mb-1">Belleza</h6>
-                        <small class="text-muted">100 Productos</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Productos Destacados -->
-    <section class="container my-5">
-        <h3 class="fw-bold mb-4 border-bottom pb-2">PRODUCTOS DESTACADOS</h3>
-        <div class="row g-4">
-            <div class="col-sm-6 col-lg-3">
-                <div class="card h-100 border shadow-sm product-card">
-                    <img src="img/product-1.jpg" class="card-img-top p-3" style="height: 200px; object-fit: contain;" alt="Camara fotografica Canon">
-                    <div class="card-body text-center">
-                        <h6 class="fw-bold text-dark">Camara fotografica Canon</h6>
-                        <p class="mb-1"><span class="text-danger fw-bold">$12,500.00</span> <span class="text-muted text-decoration-line-through small">$15,000.00</span></p>
-                        <div class="text-warning small mb-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> (99)</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="card h-100 border shadow-sm product-card">
-                    <img src="img/product-2.jpg" class="card-img-top p-3" style="height: 200px; object-fit: contain;" alt="Blusa azul">
-                    <div class="card-body text-center">
-                        <h6 class="fw-bold text-dark">Blusa azul</h6>
-                        <p class="mb-1"><span class="text-danger fw-bold">$250.00</span> <span class="text-muted text-decoration-line-through small">$400.00</span></p>
-                        <div class="text-warning small mb-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> (99)</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="card h-100 border shadow-sm product-card">
-                    <img src="img/product-3.jpg" class="card-img-top p-3" style="height: 200px; object-fit: contain;" alt="Lampara de mesa">
-                    <div class="card-body text-center">
-                        <h6 class="fw-bold text-dark">Lampara de mesa</h6>
-                        <p class="mb-1"><span class="text-danger fw-bold">$1,250.00</span> <span class="text-muted text-decoration-line-through small">$2,300.00</span></p>
-                        <div class="text-warning small mb-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> (99)</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="card h-100 border shadow-sm product-card">
-                    <img src="img/product-4.jpg" class="card-img-top p-3" style="height: 200px; object-fit: contain;" alt="Tenis Nike Deportivo">
-                    <div class="card-body text-center">
-                        <h6 class="fw-bold text-dark">Tenis Nike Deportivo</h6>
-                        <p class="mb-1"><span class="text-danger fw-bold">$799.00</span> <span class="text-muted text-decoration-line-through small">$993.00</span></p>
-                        <div class="text-warning small mb-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> (99)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">CONTÁCTANOS</h5>
-                    <p class="small text-secondary">Ubica nuestra tienda física en</p>
-                    <p class="small mb-1"><i class="fa fa-map-marker-alt text-warning me-2"></i> Av. central No. 123</p>
-                    <p class="small mb-1"><i class="fa fa-envelope text-warning me-2"></i> info@tienda.com</p>
-                    <p class="small"><i class="fa fa-phone text-warning me-2"></i> +52 961 61 12345</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">MENU</h5>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">› Home</a></li>
-                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">› Tienda</a></li>
-                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">› Galeria</a></li>
-                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">› Nosotros</a></li>
-                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">› Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">NUESTRAS REDES SOCIALES</h5>
-                    <div class="d-flex gap-2">
-                        <a href="#" class="btn btn-warning text-dark btn-sm"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="btn btn-warning text-dark btn-sm"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="btn btn-warning text-dark btn-sm"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="btn btn-warning text-dark btn-sm"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="border-secondary my-4">
-            <div class="text-center small text-secondary">
-                <p class="mb-0">© Domain. Todos los derechos reservados. Diseñado by</p>
-            </div>
-        </div>
+    <footer class="site-footer">
+        <p>© Pizzas el Papi. Derechos reservados.</p>
     </footer>
-
-    <!-- Bootstrap 5 JS Bundle CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
